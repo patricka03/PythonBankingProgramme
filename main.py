@@ -9,15 +9,16 @@ def show_balance():
 
 #Make a deposit
 def deposit():
-    amount = float(input(f"Enter the amount you will like to deposit: "))
+    amount = float(input(f"Enter the amount you would like to deposit: "))
     if amount < 0:
         print("That's not a valid amount")
+        return 0
     else:
         return amount
 
 #Make a withdraw
 def withdraw():
-    amount = float(input(f"Enter the amount you will like to withdraw: "))
+    amount = float(input(f"Enter the amount you would like to withdraw: "))
     if amount < 0:
         print("That's not a valid amount")
     else:
@@ -48,3 +49,5 @@ while is_running:
             print(f"You have withdrawn £{amount}. Your new balance is £{balance}")
         else:
             print(f"You do not have enough amount to withdraw")
+    else:
+        print(f"You’ve entered an incorrect option. Please choose between 1 and 4.")
